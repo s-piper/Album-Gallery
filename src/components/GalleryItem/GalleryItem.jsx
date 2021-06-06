@@ -48,7 +48,7 @@ function GalleryItem({ album, getAlbumList }) {
     
             <div className="bttn"> 
                 {/* makes the button to trigger PUT */}
-                <button onClick={likeIt}>Love It!</button>
+                <button className="btn41-43 btn-42" onClick={likeIt}>Love It!</button>
                 {/* displays the current count */}
                 <p>{album.likes} people love this!</p>
             </div>
