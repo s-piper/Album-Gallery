@@ -5,7 +5,7 @@ function GalleryItem({album, getAlbumList}) {
 
     const [isText, setIsText] = useState(false)
 
-    const handleLike = () =>{
+    const likeIt = () =>{
         axios.put(`/gallery/like/${album.id}`)
         .then(response => {
             console.log('Put res:',response);
@@ -14,13 +14,29 @@ function GalleryItem({album, getAlbumList}) {
             console.log('Put error', err);
         })
     }
+
+    const switchIt = () =>{
+        if(!isText) {
+
+            setIsText(true);
+        } else{
+
+            setIsText(false);
+        }
+    }
     
     return(
 
         <div className="pictureBox">
+            {isText ? (
+            <img src={album.path} onClick ={switchIt}  width="200" height="200" /> 
 
-            <img src={album.path} width="200" height="200"/>
-            <button onClick={handleLike}>Love It!</button>
+            ):(
+                
+                <p onClick ={switchIt}>{album.description}</p>
+
+            )}
+            <button onClick={likeIt}>Love It!</button>
             <p>{album.likes} people love this!</p>
 
 
