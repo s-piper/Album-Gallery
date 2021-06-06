@@ -1,0 +1,17 @@
+.pictureBox{
+    border: 1px solid grey;
+    height: 200px;
+    width: 200px;
+    flex: auto;
+    text-align: center;
+}
+
+/* .textBox{
+    height: 200px;
+    width: 200px;
+    top: 50%;
+    bottom: 50%;
+    margin-left: 50%;
+    margin-right: 50%;
+   
+} */
