@@ -1,17 +1,23 @@
 .pictureBox{
     border: 1px solid grey;
     height: 200px;
-    width: 200px;
+    width: 5%;
+    display: 100%;
     flex: auto;
     text-align: center;
 }
 
-/* .textBox{
+.img{
     height: 200px;
-    width: 200px;
-    top: 50%;
-    bottom: 50%;
-    margin-left: 50%;
-    margin-right: 50%;
-   
-} */
+    display: 100%;
+}
+
+.textBox{
+    height: 125px;
+    text-align: center;
+    margin-top: 75px;
+}
+
+.bttn{
+    margin-top: 10px;
+}

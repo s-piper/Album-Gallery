@@ -32,16 +32,21 @@ function GalleryItem({ album, getAlbumList }) {
         //sets how our card or box will render
         <div className="pictureBox">
             {isText ? (
-                //when clicked it will trigger the function to change state 
-                <p className="textBox" onClick={switchIt}>{album.description}</p>
 
+                //when clicked it will trigger the function to change state
+                <div className="textBox" onClick={switchIt}> 
+                <p > {album.description}</p>
+
+                </div>
             ) : (
-                //when picture is clicked it will trigger the function to switch state
-                <img src={album.path} onClick={switchIt} width="200" height="200" />
 
+                //when picture is clicked it will trigger the function to switch state
+                <div className ="img">
+                <img src={album.path} onClick={switchIt} width="200" height="200" />
+                </div>
             )}
     
-            <div> 
+            <div className="bttn"> 
                 {/* makes the button to trigger PUT */}
                 <button onClick={likeIt}>Love It!</button>
                 {/* displays the current count */}
