@@ -1,4 +1,4 @@
-
+import GalleryItem from "../GalleryItem/GalleryItem";
 
 function GalleryList ({catalog, getAlbumList}){
 
@@ -6,15 +6,11 @@ function GalleryList ({catalog, getAlbumList}){
 
     return (
         <div className = "tBD">
-            {catalog.map(item => {
+            {catalog.map(album => {
 
                 return(
-                    <div>
-                        <p key = "{item.id}">
-                            <img src={item.path} width="100" height="100" />
-                        
-                        </p>
-                    </div>
+                    
+                    <GalleryItem getAlbumList = {getAlbumList} key= {album.id} album = {album} />
                 )
             })}
         </div>
