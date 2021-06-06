@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import {useState, useEffect} from 'react';
 import Axios from 'axios';
+import GalleryList from '../GalleryList/GalleryList';
 
 
 
@@ -31,7 +32,7 @@ function App() {
           <h1 className="App-title">In My Jazz Rotation</h1>
         </header>
         <p>Gallery goes here</p>
-        <img src="images/goat_small.jpg"/>
+        <GalleryList catalog = {albumList} getAlbumList = {getAlbumList} />
       </div>
     );
 }
